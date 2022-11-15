@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- calling CSS styles, it is a responsive web application -->
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>Tarea 3</title>
+</head>
+
+<body>
+
+
+    <!-- calculator -->
+    <!-- it uses a particular functions as &divide or &times(multiply) instead of creating the operation through out code -->
+    <div class="container">
+        
+        <div class="calculator dark">
+
+            <div class="row" id="result">
+                <form name="calc">
+                    
+                    <input type="text" class="current-operand" name="result" readonly>
+
+                </form>
+            </div>
+
+            <div class="buttons">
+                <table>
+                    <tr>
+                        <td><button class="btn-operator" onclick="clearScreen()" id="allClear">C</button></td>
+                        <td><button class="btn-operator" onclick="myFunction(this.id)" id="/">&divide;</button></td>
+                        <td><button class="btn-operator" onclick="myFunction(this.id)" id="*">&times;</button></td>
+                        <td><button class="btn-operator" onclick="myFunction(this.id)" id=".">.</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="7">7</button></td>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="8">8</button></td>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="9">9</button></td>
+                        <td><button class="btn-operator" onclick="myFunction(this.id)" id="-">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="4">4</button></td>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="5">5</button></td>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="6">6</button></td>
+                        <td><button class="btn-operator" onclick="myFunction(this.id)" id="+">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="1">1</button></td>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="2">2</button></td>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="3">3</button></td>
+                        <td rowspan="2"><button class="btn-equal" onclick="calculate()" id="equals">=</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn-operator" onclick="myFunction(this.id)" id="(">(</button></td>
+                        <td><button class="btn-number" onclick="myFunction(this.id)" id="0">0</button></td>
+                        <td><button class="btn-operator" onclick="myFunction(this.id)" id=")">)</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!--Welcome modal, it will pop up at the begining-->
+    <div class="popup">
+        <div class="modal">
+            <p class="winner-message">Let's use a calculator or play Tic Tac Toe!</p>            
+            <div class="start-btn">Continue</div>
+            
+        </div>
+    </div>
+<!-- table for game tic-tac-toe -->
+    <div class="table">
+        <div class="row">
+            <div class="cell x-marker" id="1">X</div>
+            <div class="cell o-marker" id="2">O</div>
+            <div class="cell x-marker" id="3">X</div>
+        </div>
+        <div class="row">
+            <div class="cell x-marker" id="4">X</div>
+            <div class="cell" id="5"></div>
+            <div class="cell" id="6"></div>
+        </div>
+        <div class="row">
+            <div class="cell o-marker" id="7">O</div>
+            <div class="cell" id="8"></div>
+            <div class="cell o-marker" id="9">O</div>
+        </div>
+    </div>
+    <!-- script for calling JavaScript functions -->
+    <script src="./js/js.js"></script>
+</body>
+
+<footer>
+    <br>
+    <br>
+</footer>
+
+</html>
